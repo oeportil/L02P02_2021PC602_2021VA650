@@ -43,34 +43,7 @@ namespace L02P02_2021PC602_2021VA650.Controllers
 
 
 
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> GuardarComentario(string comentario)
-        {
-            if (!string.IsNullOrEmpty(comentario))
-            {
-                // Crear una nueva instancia de ComentariosLibro
-                var nuevoComentario = new ComentariosLibro
-                {
-                    Comentarios = comentario,
-                    // No establecer la propiedad Id, se generará automáticamente
-                };
-
-                // Agregar el nuevo comentario al contexto
-                _context.ComentariosLibros.Add(nuevoComentario);
-
-                // Guardar los cambios en la base de datos
-                await _context.SaveChangesAsync();
-
-                // Redirigir a la acción Index u otra acción apropiada
-                return RedirectToAction(nameof(Index));
-            }
-
-            // Si el comentario es nulo o vacío, manejarlo de acuerdo a tus necesidades
-            // Por ejemplo, podrías mostrar un mensaje de error o redirigir a otra página
-            return RedirectToAction(nameof(Index));
-        }
+       
 
 
 

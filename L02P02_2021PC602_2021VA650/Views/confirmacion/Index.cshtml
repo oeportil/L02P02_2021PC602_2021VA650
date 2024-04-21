@@ -1,0 +1,63 @@
+﻿@model IEnumerable<L02P02_2021PC602_2021VA650.Models.ComentariosLibro>
+
+@{
+    ViewData["Title"] = "Confirmacion";
+}
+
+<div></div>
+<div class="container">
+    <ul class="progressbar">
+        <li>Autores</li>
+        <li>Libros</li>
+        <li>Comentarios Existentes</li>
+        <li class="active">Nuevo Comentario</li>
+    </ul>
+</div>
+
+
+<div class="border border-1 p-4 rounded rounded-1  d-flex" style="margin-top:auto">
+
+    <h1 style="color:#504cca">Autor: </h1>
+    <h1> Ejemplo</h1>
+    <h1 style="color:#504cca; margin-left:10rem">Libro: </h1>
+    <h1> Ejemplo</h1>
+</div>
+<div class="d-flex col-12 mt-5">
+    <div class="col-6">
+        <h2 style="color:#504cca">Comentarios existentes</h2>
+        <div class="border border-1 p-4 rounded rounded-1 ">
+            <div>
+                @if (Model.Any())
+                {
+                    foreach (var comentario in Model)
+                    {
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">@comentario.Usuario</h5>
+                                <p class="card-text">@comentario.Comentarios</p>
+
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>No hay comentarios para este libro.</p>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-5">
+        <h2 style="color:#504cca">Agregar un comentario</h2>
+        <h4>Comentario</h4>
+        <div class="border border-1" style="padding-top:100px; padding-bottom:100px; padding-left:20px">
+            <p>Contenido del comentario adicionado</p>
+        </div>
+        <div class="border border-1 p-3">
+            <div style="background-color:#dcf2fd; text-align:center; padding:20px 0 20px 0">
+                <p>Comentario adicionado con exito!</p>
+            </div>
+        </div>
+    </div>
+</div>

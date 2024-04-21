@@ -9,8 +9,8 @@
     <ul class="progressbar">
         <li>Autores</li>
         <li >Libros</li>
-        <li >Comentarios Existentes</li>
-        <li class="active">Nuevo Comentario</li>
+        <li class="active">Comentarios Existentes</li>
+        <li >Nuevo Comentario</li>
     </ul>
 </div>
 </div>
@@ -58,15 +58,16 @@
             </div>
         </div>
         <div class="col-1"></div>
-        <form method="post" asp-action="GuardarComentario" id="comentarioForm">
-            <div class="col-5">
-                <h2 style="color:#504cca">Agregar un comentario</h2>
-                <h4>Comentario</h4>
-                <textarea name="comentario" id="comentario" cols="30" style="height:200px; width:100%" rows="100"></textarea>
-                <div class="border border-1 p-3">
-                    <button type="submit" class="btn btn-success w-100">Guardar Comentario</button>
-                </div>
+        <div class="col-5">
+            <h2 style="color:#504cca">Agregar un comentario</h2>
+            <h4>Comentario</h4>
+            <textarea name="" id="" cols="30" style="height:200px; width:100%" rows="100"></textarea>
+            <div class="border border-1 p-3">
+                <button class="btn btn-success w-100" style="text-decoration:none;">
+                    @Html.ActionLink("Guardar Comentario", "Index", "Confirmacion", null, new { @class = "btn btn-success seleccionar-libro", style = "color:white;" })
+                </button>
             </div>
-        </form>
+            </div>
+
     </div>
 </div>
