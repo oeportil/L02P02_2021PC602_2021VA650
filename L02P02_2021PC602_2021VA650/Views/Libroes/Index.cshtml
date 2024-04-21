@@ -1,0 +1,48 @@
+﻿@model IEnumerable<L02P02_2021PC602_2021VA650.Models.Libro>
+
+@{
+    ViewData["Title"] = "Listado de Libros por Autor";
+  
+}
+
+
+
+<div></div>
+<div class="container">
+    <ul class="progressbar">
+        <li >Autores</li>
+        <li class="active">Libros</li>
+        <li>Comentarios Existentes</li>
+        <li>Nuevo Comentario</li>
+    </ul>
+</div>
+</div>
+
+<div class="border border-1 p-4 rounded rounded-1 m-5" style="margin-top:auto">
+    <h1 style="color:#504cca">Autor: @ViewData["nombreautor"] </h1>
+</div>
+
+
+<div class="border border-1 p-4 rounded rounded-1 m-5" style="margin-top:auto">
+@foreach (var libro in Model)
+{
+        <h1 style="color:#504cca">Seleccione el Libro del Autor</h1>
+    
+    <div class="d-flex justify-content-between border border-1 p-2 rounded-1">
+        <div>
+            <h2>@libro.Nombre</h2>
+        </div>
+        <div>
+                <button type="button" class="btn btn-success">@Html.ActionLink("Seleccionar", "Index", "ComentariosLibroes", new { id = libro.Id }, new { @class = "btn btn-success seleccionar-libro" })
+                </button>
+        </div>
+    </div>
+
+}
+ </div>
+
+
+
+
+
+

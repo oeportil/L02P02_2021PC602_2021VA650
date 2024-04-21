@@ -1,9 +1,20 @@
+using L02P02_2021PC602_2021VA650.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddDbContext<LibreriaDbContext>(options =>
+        options.UseSqlServer(
+            builder.Configuration.GetConnectionString("Connection")
+            )
+        );
+
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -22,6 +33,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Autores}/{action=Index}/{id?}");
 
 app.Run();

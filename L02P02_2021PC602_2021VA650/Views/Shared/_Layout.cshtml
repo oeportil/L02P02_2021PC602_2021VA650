@@ -7,28 +7,17 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/L02P02_2021PC602_2021VA650.styles.css" asp-append-version="true" />
+    <link href="~/img/UNICAES_Logo.png" rel="stylesheet" />
 </head>
 <body>
+
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">L02P02_2021PC602_2021VA650</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div style="background-color: #22252c;">
+            <img src="/img/UNICAES_Logo.png" width="100px" height="auto" class="center" />
+            <p style="color: aliceblue; text-align: center; font-size: 30px; padding-top: 10px;"> Comentarios por Libros</p>
+            <p style="color: aliceblue; text-align: center; font-weight: lighter; font-size: 15px; padding-bottom: 30px; margin-top: -10px;"> Seleccione el autor ->Seleccione el libro -> Se muestran los comentarios existentes -> Adicione un nuevo comentario</p>
+
+        </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -37,9 +26,11 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - L02P02_2021PC602_2021VA650 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+    <footer style="background-color: #22252c;" >
+    <p style="text-align: center; color: aliceblue; font-weight: lighter;"> 2024-20-04 - Oscar Portillo Cerón</p>
+    <p style="text-align: center; color: aliceblue; font-weight: lighter;"> 2024-20-04 - Jonathan Uziel Villanueva</p>
+
+    </footer>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
